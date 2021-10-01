@@ -84,8 +84,6 @@ def check_test(path_to_test):
                 total_bricks_ref = int(re.findall(r'\d+', line)[TOTAL_INDEX])
 
         # Verify memory peak and bricks total difference
-        if total_bricks_run == 15 and total_bricks_ref == 21:
-            total_bricks_ref = 21
         memory_diff = round((max_peak_run - max_peak_ref) / max_peak_ref, 2)
         bricks_diff = round((total_bricks_run - total_bricks_ref) / total_bricks_ref, 2)
         MAX_MEMORY_DIFF = 0.5
